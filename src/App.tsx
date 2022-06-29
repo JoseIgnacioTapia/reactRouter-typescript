@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import Customer from './components/Customer';
+import Employee from './components/Employee';
 
 function App() {
   return (
@@ -19,6 +21,18 @@ function App() {
                 <i className="fa fa-book" />
                 Read More
               </button>
+            </div>
+          </div>
+
+          {/* <div className="row">
+            <div className="col">
+              <Customer name={'Rajan'} age={25} title={'Software Engineer'} />
+            </div>
+          </div> */}
+
+          <div className="row">
+            <div className="col">
+              <Employee />
             </div>
           </div>
         </div>
