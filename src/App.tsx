@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
+import Counter from './components/Counter';
 import Customer from './components/Customer';
 import Employee from './components/Employee';
+import Greetings from './components/Greetings';
 
 function App() {
   return (
@@ -30,9 +32,21 @@ function App() {
             </div>
           </div> */}
 
-          <div className="row">
+          {/* <div className="row">
             <div className="col">
               <Employee />
+            </div>
+          </div> */}
+
+          <div className="row">
+            <div className="col">
+              <Counter />
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col">
+              <Greetings />
             </div>
           </div>
         </div>
