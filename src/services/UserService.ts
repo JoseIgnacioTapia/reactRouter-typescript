@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { IUser2 } from '../models/IUsers';
 
 export class UserService {
@@ -34,5 +35,14 @@ export class UserService {
 
   public static getAllUsers() {
     return this.users;
+  }
+}
+
+export class UserServiceAxios {
+  private static serverURL: string = `https://jsonplaceholder.typicode.com`;
+
+  public static getAllUsers() {
+    let dataURL: string = `${this.serverURL}/users`;
+    return axios.get(dataURL);
   }
 }
