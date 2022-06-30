@@ -4,6 +4,7 @@ import Counter from './components/Counter';
 import Customer from './components/Customer';
 import Employee from './components/Employee';
 import Greetings from './components/Greetings';
+import LoginForm from './components/LoginForm';
 
 function App() {
   return (
@@ -19,10 +20,10 @@ function App() {
                 magni! Veniam nobis suscipit tempora corrupti molestiae,
                 cupiditate iste quidem voluptatum nam soluta?
               </p>
-              <button className="btn btn-success btn-sm">
+              {/* <button className="btn btn-success btn-sm">
                 <i className="fa fa-book" />
                 Read More
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -38,7 +39,7 @@ function App() {
             </div>
           </div> */}
 
-          <div className="row">
+          {/* <div className="row">
             <div className="col">
               <Counter />
             </div>
@@ -47,6 +48,11 @@ function App() {
           <div className="row">
             <div className="col">
               <Greetings />
+            </div>
+          </div> */}
+          <div className="row">
+            <div className="col">
+              <LoginForm />
             </div>
           </div>
         </div>
