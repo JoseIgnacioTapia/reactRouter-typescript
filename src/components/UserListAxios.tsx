@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { IUserAxios } from '../models/IUsers';
 import { UserServiceAxios } from '../services/UserService';
+import { Link } from 'react-router-dom';
 
 interface IState {
   loading: boolean;
@@ -40,8 +41,16 @@ const UserListAxios: React.FC<IProps> = () => {
 
   return (
     <>
-      <h3>UserListAxios</h3>
-      <div className="container">
+      <div className="container  mt-3">
+        <div className="row">
+          <div className="col">
+            <p className="h3 fw-bold text-success">User List</p>
+            <p className="fst-italic">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              voluptas necessitatibus eos debitis officiis molestiae.
+            </p>
+          </div>
+        </div>
         <div className="row">
           <table className="table table-hover text-center table-striped">
             <thead className="bg-success text-white">
@@ -60,7 +69,14 @@ const UserListAxios: React.FC<IProps> = () => {
                   return (
                     <tr key={user.id}>
                       <td>{user.id}</td>
-                      <td>{user.name}</td>
+                      <td>
+                        <Link
+                          to={`/contacts/${user.id}`}
+                          className="text-decoration-none text-success fw-bold"
+                        >
+                          {user.name}
+                        </Link>
+                      </td>
                       <td>{user.email}</td>
                       <td>{user.phone}</td>
                       <td>{user.company.name}</td>

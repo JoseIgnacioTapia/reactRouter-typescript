@@ -5,15 +5,30 @@ import Customer from './components/Customer';
 import Employee from './components/Employee';
 import Greetings from './components/Greetings';
 import LoginForm from './components/LoginForm';
+import Navbar from './components/Navbar';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import UserList from './components/UserList';
 import UserListAxios from './components/UserListAxios';
+import UserDetails from './components/UserDetails';
+import About from './components/About';
 
 function App() {
   return (
     <React.Fragment>
+      <Navbar />
+      <Routes>
+        <Route path={'/'} element={<Navigate to={'/contacts/list'} />} />
+        <Route path={'/contacts/list'} element={<UserListAxios />} />
+        <Route path={'/contacts/:id'} element={<UserDetails />} />
+        <Route path={'/about'} element={<About />} />
+      </Routes>
+
+      <br />
+      <br />
+
       <div className="container mt-3">
         <div className="grid">
-          <div className="row">
+          {/* <div className="row">
             <div className="col">
               <p className="h3 fw-bold text-success">App Component</p>
               <p className="fst-italic">
@@ -22,12 +37,12 @@ function App() {
                 magni! Veniam nobis suscipit tempora corrupti molestiae,
                 cupiditate iste quidem voluptatum nam soluta?
               </p>
-              {/* <button className="btn btn-success btn-sm">
+              <button className="btn btn-success btn-sm">
                 <i className="fa fa-book" />
                 Read More
-              </button> */}
+              </button>
             </div>
-          </div>
+          </div> */}
 
           {/* <div className="row">
             <div className="col">
@@ -64,11 +79,11 @@ function App() {
             </div>
           </div> */}
 
-          <div className="row">
+          {/* <div className="row">
             <div className="col">
               <UserListAxios />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </React.Fragment>

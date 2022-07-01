@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IUser2 } from '../models/IUsers';
+import { IUser2, IUserAxios } from '../models/IUsers';
 import { UserService } from '../services/UserService';
 
 interface IState {
@@ -14,13 +14,17 @@ const UserList: React.FC<IProps> = () => {
 
   return (
     <>
-      <div className="container">
+      <div className="container  mt-3">
         <div className="row">
           <div className="col">
-            <p className="h3">User List</p>
+            <p className="h3 fw-bold text-success">User List</p>
+            <p className="fst-italic">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+              voluptas necessitatibus eos debitis officiis molestiae.
+            </p>
           </div>
         </div>
-        <div className="orw">
+        <div className="row">
           <div className="col">
             <table className="table table-striped text-center table-hover shadow-lg">
               <thead className="bg-dark text-white">
